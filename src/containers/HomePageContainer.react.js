@@ -5,13 +5,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import HomePage from '../components/HomePage.react';
+import * as strings from '../Strings.js';
 
 /** Called by redux when the state changes -
  *	this maps the global state to the props that this component needs
  */
 const mapStateToProps = (state) => {
   console.log('Mapping homePage state to props:' + JSON.stringify(state));
-	return {};
+	return { appTitle: strings.APP_TITLE,
+             welcomeText: strings.WELCOME_TEXT 
+    };
 };
 
 /**

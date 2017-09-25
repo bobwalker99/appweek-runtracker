@@ -10,9 +10,12 @@ const AppNavigator = TabNavigator({
   Home: { screen: HomePageContainer }
 });
 
-const Navigator = ({ dispatch, nav }) =>
+const Navigator = ({ dispatch, nav }) => {
+      console.log('Dispatch: ' + JSON.stringify(dispatch));
+      console.log('nav: ' + JSON.stringify(nav));
+      return (
       <AppNavigator
           navigation={addNavigationHelpers({ dispatch, state: nav })}
-      />;
+      />)};
 
 export  { AppNavigator, Navigator };

@@ -7,9 +7,9 @@ import { Navigator } from '../components/Navigator.react';
 
 const mapStateToProps = (state) => {
     console.log('Mapping nav stateToProps: ' + JSON.stringify(state));
-    return ({
+    return {
         nav: state.navigationReducer.nav,
-    });
+    };
 };
 
 export default connect(mapStateToProps)(Navigator);

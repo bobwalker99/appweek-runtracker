@@ -51,7 +51,27 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#00A9CE',
+    backgroundColor: 'white',
+  },
+  header: {
+    height: 65,
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    paddingTop: 20,
+    paddingRight:5,
+    backgroundColor: '#0072CE',
+    zIndex: 100,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  titleText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: 'white',
+    paddingTop: 5,
+    paddingLeft: 7
   }
 });
 

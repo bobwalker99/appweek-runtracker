@@ -14,7 +14,7 @@ const firstAction = AppNavigator.router.getActionForPathAndParams(routes.NAVIGAT
 const tempNavState = AppNavigator.router.getStateForAction(firstAction);
 const initialNavState = AppNavigator.router.getStateForAction(tempNavState);
 
-const nav = (state = initialNavState, action) => {
+const nav = (state = { ...initialNavState }, action) => {
   console.log('state in nav reducer: ' + JSON.stringify(state));
   console.log('action in nav reducer: ' + JSON.stringify(action));
   let nextState;
@@ -39,4 +39,5 @@ const nav = (state = initialNavState, action) => {
 const navigationReducer = combineReducers({
   nav
 });
+
 export default navigationReducer;

@@ -4,4 +4,4 @@
  */
 
 //Navigation
-export const NAVIGATION_HOME = 'NAVIGATION_HOME'
+export const NAVIGATION_HOME = 'NAVIGATION_HOME';

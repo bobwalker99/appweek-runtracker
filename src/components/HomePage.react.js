@@ -8,6 +8,7 @@ import { TabNavigator } from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import styles from '../Styles';
+import * as strings from '../Strings';
 
 const navigationOptions = {
   tabBarLabel: 'Home',
@@ -19,9 +20,19 @@ const navigationOptions = {
        />),
 };
 
+const AppHeader = ({props}) => 
+        <View style={styles.header}>
+            <Text style={styles.titleText}>{props.appTitle}</Text>
+            <Image style={{width: 90, height: 35 }} source={require('../../img/nhs-logo.png')} />
+        </View>
+;
+
 const HomePage = props =>
-      <View style={styles.homeScreen}>
-            <Text>Home</Text>
+    <View style={styles.homeScreen}>
+        <AppHeader props={props} />
+        <View>
+            <Text>{props.welcomeText}</Text>
+        </View>
     </View>;
 
 HomePage.navigationOptions = navigationOptions;
