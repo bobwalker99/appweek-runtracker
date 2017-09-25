@@ -1,0 +1,9 @@
+{
+  "expo": {
+    "name": "NHS App Week Run Tracker",
+    "sdkVersion": "21.0.0",
+    "packagerOpts": {
+        "assetExts": ["ttf"]
+    }
+  }
+}
