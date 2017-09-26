@@ -1,0 +1,10 @@
+As a Runner
+I want to enter a time for a specific distance and get a prediction for other distances.
+
+Tasks:
+  * Time entry control
+  * Time entry validation
+  * Other distance selection - from predefined list, manual entry
+  * Prediction calculator
+  * Prediction display
+  * Storage of predictions?
