@@ -5,11 +5,18 @@ import { connect } from 'react-redux';
 
 import { Navigator } from '../components/Navigator.react';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     console.log('Mapping nav stateToProps: ' + JSON.stringify(state));
     return {
         nav: state.navigationReducer.nav,
     };
 };
 
-export default connect(mapStateToProps)(Navigator);
+const mapDispatchToProps = dispatch => {
+    console.log('Mapping nav dispatchToProps: ' + JSON.stringify(dispatch));
+    return {
+        dispatch: dispatch,
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Navigator);

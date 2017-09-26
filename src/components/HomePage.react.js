@@ -7,6 +7,7 @@ import { Image, View, Text } from 'react-native';
 import { TabNavigator } from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
+import TimeInput from './TimeInput.react';
 import styles from '../Styles';
 import * as strings from '../Strings';
 
@@ -20,20 +21,22 @@ const navigationOptions = {
        />),
 };
 
-const AppHeader = ({props}) => 
-        <View style={styles.header}>
-            <Text style={styles.titleText}>{props.appTitle}</Text>
-            <Image style={{width: 90, height: 35 }} source={require('../../img/nhs-logo.png')} />
-        </View>
-;
+const AppHeader = ({props}) =>
+    <View style={styles.header}>
+        <Text style={styles.titleText}>{props.appTitle}</Text>
+        <Image style={{width: 90, height: 35 }} source={require('../../img/nhs-logo.png')} />
+    </View>;
 
-const HomePage = props =>
-    <View style={styles.homeScreen}>
+const HomePage = props => {
+  console.log('Props:' + JSON.stringify(props));
+    return (<View style={styles.homeScreen}>
         <AppHeader props={props} />
         <View>
             <Text>{props.welcomeText}</Text>
+            <TimeInput props={props} />
         </View>
-    </View>;
+    </View>);
+  };
 
 HomePage.navigationOptions = navigationOptions;
 

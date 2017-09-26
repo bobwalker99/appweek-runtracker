@@ -71,7 +71,14 @@ const styles = StyleSheet.create({
     color: 'white',
     paddingTop: 14,
     paddingLeft: 14
-  }
+  },
+  timeInput: {
+    flex:1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent:'space-between',
+    backgroundColor: '#ff0000',
+  },
 });
 
 export default styles;
