@@ -7,6 +7,8 @@ import { Image, View, Text } from 'react-native';
 import { TabNavigator } from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
+import DistanceSelector from './DistanceSelector.react'
+
 import styles from '../Styles';
 import * as strings from '../Strings';
 
@@ -30,9 +32,7 @@ const AppHeader = ({props}) =>
 const HomePage = props =>
     <View style={styles.homeScreen}>
         <AppHeader props={props} />
-        <View>
-            <Text>{props.welcomeText}</Text>
-        </View>
+        <DistanceSelector props={props} />
     </View>;
 
 HomePage.navigationOptions = navigationOptions;
