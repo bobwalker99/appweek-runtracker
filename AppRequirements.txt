@@ -1,0 +1,8 @@
+It's a running app that:
+* Predicts times for different distances based upon a known time that the user enters - for example if someone has run a timed 5k, such as a ParkRun, they can  enter their time to get predicted times for 10k/10miles/half marathon/marathon (or any distance they enter)
+* Tells the user the average pace they would need to run to achieve their predicted time over the distance - so for example, if the predicted half marathon time was 1hour 15 mins 20 secs, the average pace to achieve this would need to be 5.45 minutes per mile.
+
+There are a number of individual online time predictors and pace calculators available but I haven't seen one that combines the two functions. They also tend to have quite simple, unattractive interfaces. Could it be possible to develop something that combines predicted time and pace with an attractive user interface that could potentially sit alongside our existing running content? (couch to 5k, running for beginners etc.)
+
+User need
+I think there's a user need because in recent years running has become more and more popular, with a lot of people now doing weekly 5k parkruns.  Regular runners may decide they want to to try running longer distances but may not know what target times they should be aiming, how to pace themselves, or how to train for a different distance. An app that combines predicted finishing times and pacing could also provide an opportunity to create a range of supporting content in areas such as training methods, session types, staying motivated, avoiding injury and nutritional advice to but a few.

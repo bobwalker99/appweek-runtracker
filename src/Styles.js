@@ -68,10 +68,9 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: 18,
-    fontWeight: 'bold',
     color: 'white',
-    paddingTop: 5,
-    paddingLeft: 7
+    paddingTop: 14,
+    paddingLeft: 14
   }
 });
 
