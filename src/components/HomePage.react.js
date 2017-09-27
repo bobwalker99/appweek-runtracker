@@ -22,23 +22,20 @@ const navigationOptions = {
        />)
 };
 
-const AppHeader = props =>
+const AppHeader = ({appTitle}) =>
     <View style={styles.header}>
-        <Text style={styles.titleText}>{props.appTitle}</Text>
+        <Text style={styles.titleText}>{appTitle}</Text>
         <Image style={{width: 90, height: 35 }} source={require("../../img/nhs-logo.png")} />
     </View>;
 
-const HomePage = props => {
-    console.log("HomePage props:" + JSON.stringify(props));
-    return (<View style={styles.homeScreen}>
-        <AppHeader />
-        <View>
-            <Text>Wait, Whut?</Text>
+const HomePage = props =>
+    <View style={styles.homeScreen}>
+        <AppHeader appTitle={props.appTitle} />
+        <View style={styles.mainPanel}>
             <DistanceSelector props={props} />
             <TimePickerContainer />
         </View>
-    </View>);
-};
+    </View>;
 
 HomePage.navigationOptions = navigationOptions;
 

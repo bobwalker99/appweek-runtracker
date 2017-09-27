@@ -30,12 +30,13 @@ class DistanceSelector extends Component {
               value={ this.state.distance }
           />
           <Text>{ this.state.distance }</Text>
-          <Text>{ this.state.miles ? "Miles" : "Kilometers" }</Text>
-          <Switch
-             style={styles.distance_switch}
-             onValueChange={ (miles) => this.setState({ miles: miles }) }
-             value={ this.state.miles }
-          />
+          <View style={styles.distance_switch}>
+            <Switch
+              onValueChange={ (miles) => this.setState({ miles: miles }) }
+              value={ this.state.miles }
+              />
+              <Text>{ this.state.miles ? "Miles" : "Kilometers" }</Text>
+          </View>
       </View>
     );
   }
@@ -48,6 +49,11 @@ const styles = StyleSheet.create({
   distance_slider: {
   },
   distance_switch: {
+    width:100,
+    height: 35,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "flex-start"
   },
 });
 

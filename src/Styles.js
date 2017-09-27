@@ -72,8 +72,10 @@ const styles = StyleSheet.create({
         paddingTop: 14,
         paddingLeft: 14
     },
-    timeInput: {
-        
+    mainPanel: {
+      top: 67,
+      flex:1,
+      backgroundColor:"#E8EDEE",
     }
 });
 

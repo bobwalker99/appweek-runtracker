@@ -12,7 +12,7 @@ import * as TimeChangeActionCreators from "../actions/TimeChangeActionCreators.j
  *	this maps the global state to the props that this component needs
  */
 const mapStateToProps = state => {
-  console.log('TIME STATE: MF ' + JSON.stringify(state));
+  console.log('TIME STATE: ' + JSON.stringify(state));
     return {
         hours: state.displayReducer.time.hours,
         minutes: state.displayReducer.time.minutes,
