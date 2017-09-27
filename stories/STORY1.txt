@@ -8,3 +8,7 @@ Tasks:
   * Prediction calculator
   * Prediction display
   * Storage of predictions?
+
+
+(original requirement:
+Predicts times for different distances based upon a known time that the user enters - for example if someone has run a timed 5k, such as a ParkRun, they can enter their time to get predicted times for 10k/10miles/half marathon/marathon (or any distance they enter))

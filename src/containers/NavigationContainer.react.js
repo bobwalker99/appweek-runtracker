@@ -1,14 +1,14 @@
 //@flow
-'use strict';
+"use strict";
 
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 
-import { Navigator } from '../components/Navigator.react';
+import { Navigator } from "../components/Navigator.react";
 
-const mapStateToProps = (state) => {
-    console.log('Mapping nav stateToProps: ' + JSON.stringify(state));
+const mapStateToProps = state => {
+    console.log("Mapping nav stateToProps: " + JSON.stringify(state));
     return {
-        nav: state.navigationReducer.nav,
+        nav: state.navigationReducer.nav
     };
 };
 
