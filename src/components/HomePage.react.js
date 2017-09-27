@@ -7,7 +7,7 @@ import { Image, View, Text } from "react-native";
 import { TabNavigator } from "react-navigation";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
-import DistanceSelector from "./DistanceSelector.react"
+import DistanceSliderContainer from "../containers/DistanceSliderContainer.react"
 import TimePickerContainer from "../containers/TimePickerContainer.react";
 import styles from "../Styles";
 import * as strings from "../Strings";
@@ -32,7 +32,7 @@ const HomePage = props =>
     <View style={styles.homeScreen}>
         <AppHeader appTitle={props.appTitle} />
         <View style={styles.mainPanel}>
-            <DistanceSelector props={props} />
+            <DistanceSliderContainer />
             <TimePickerContainer />
         </View>
     </View>;

@@ -7,18 +7,7 @@ import {
     Switch
 } from 'react-native';
 
-class DistanceSelector extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-        distance: 0,
-        miles: true,
-    };
-  }
-
-  render() {
-    return (
+const DistanceSelector = props =>
       <View style={styles.distance_container}>
           <Text>Choose your distance</Text>
           <Slider
@@ -26,21 +15,38 @@ class DistanceSelector extends Component {
               step={1}
               minimumValue={0}
               maximumValue={100}
-              onValueChange={ (distance) => this.setState({ distance: distance }) }
-              value={ this.state.distance }
+              onValueChange={ (distance) => {
+                console.log('PROPS: ' + JSON.stringify(props));
+                props.onDistanceChanged(distance, props.miles )
+                }
+              }
+              value={ props.distance }
           />
-          <Text>{ this.state.distance }</Text>
+          <Text>{ props.distance }</Text>
           <View style={styles.distance_switch}>
             <Switch
-              onValueChange={ (miles) => this.setState({ miles: miles }) }
-              value={ this.state.miles }
+              onValueChange={ (miles) => {
+                  var distance = props.distance;
+                  console.log('pre-distance: ' + distance + " miles:" + miles + ", props: " + JSON.stringify(props));
+                  if (props.miles && !miles) {
+                    //was miles, convert to km
+                    distance = distance * 1.609344;
+                  }
+                  else if (!props.miles && miles) {
+                    //was km convert to miles
+                    distance = distance / 1.609344;
+                  }
+                  distance = Math.round(distance * 100) / 100;
+                  console.log('post-distance: ' + distance);
+                  props.onDistanceChanged(distance, miles);
+                }
+              }
+              value={ props.miles }
               />
-              <Text>{ this.state.miles ? "Miles" : "Kilometers" }</Text>
+              <Text>{ props.miles ? "Miles" : "Kilometers" }</Text>
           </View>
-      </View>
-    );
-  }
-}
+      </View>;
+
 
 const styles = StyleSheet.create({
   distance_container: {

@@ -6,6 +6,8 @@ import { combineReducers } from "redux";
 import * as types from "../constants/ActionTypes";
 
 const initialTimeState = { hours: 0, minutes:30, seconds: 0};
+const initialDistanceState = { distance: 0, miles: false };
+const initialPaceState = { unitTime: 300, units: "km" };
 
 const time = (state = initialTimeState, action) => {
     //console.log("state in display reducer: " + JSON.stringify(state));
@@ -26,9 +28,32 @@ const time = (state = initialTimeState, action) => {
     return state;
 };
 
+const distance = (state = initialDistanceState, action) => {
+  switch (action.type) {
+    case types.RECORDED_DISTANCE_CHANGED:
+      return { ...state,
+                  distance: action.distance,
+                  miles: action.miles }
+    default:
+      break;
+  }
+  return state;
+};
+
+const pace = (state = initialPaceState, action) => {
+  switch (action.type) {
+    case types.PACE_CHANGED:
+      return { ...state, pace: action.pace }
+    default:
+      break;
+  }
+  return state;
+};
 
 const displayReducer = combineReducers({
-    time
+    time,
+    distance,
+    pace
 });
 
 export default displayReducer;
