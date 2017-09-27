@@ -73,8 +73,7 @@ const styles = StyleSheet.create({
         paddingLeft: 14
     },
     timeInput: {
-        width:150,
-        backgroundColor: "#ff0000"
+        
     }
 });
 

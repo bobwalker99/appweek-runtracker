@@ -7,7 +7,7 @@ import { Image, View, Text } from "react-native";
 import { TabNavigator } from "react-navigation";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
-import TimeInput from "./TimeInput.react";
+import TimePickerContainer from "../containers/TimePickerContainer.react";
 import styles from "../Styles";
 import * as strings from "../Strings";
 
@@ -32,8 +32,8 @@ const HomePage = props => {
     return (<View style={styles.homeScreen}>
         <AppHeader />
         <View>
-            <Text>{props.welcomeText}</Text>
-            <TimeInput />
+            <Text>Wait, Whut?</Text>
+            <TimePickerContainer />
         </View>
     </View>);
 };
