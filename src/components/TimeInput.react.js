@@ -12,7 +12,7 @@ const pickerItemGenerator = (arraySize) => {
   });
 }
 
-//We're treating this as a componenet, so style it locally
+//We're treating this as a component, so style it locally
 const styles = StyleSheet.create({
     timeInputContainer: {
       height: 100,
