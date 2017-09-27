@@ -1,12 +1,13 @@
 //@flow
-'use strict';
+"use strict";
 
-import { combineReducers } from 'redux';
-
-import navigationReducer from './navigationReducer';
+import { combineReducers } from "redux";
+import displayReducer from "./displayReducer";
+import navigationReducer from "./navigationReducer";
 
 const appWeekRunTrackerApp = combineReducers({
-  navigationReducer
+    displayReducer,
+    navigationReducer
 });
 
 export default appWeekRunTrackerApp;

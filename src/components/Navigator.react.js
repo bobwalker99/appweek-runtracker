@@ -1,21 +1,18 @@
 //@flow
-'use strict';
+"use strict";
 
-import React from 'react';
-import { addNavigationHelpers, TabNavigator } from 'react-navigation';
+import React from "react";
+import { addNavigationHelpers, TabNavigator } from "react-navigation";
 
-import HomePageContainer from '../containers/HomePageContainer.react';
+import HomePageContainer from "../containers/HomePageContainer.react";
 
 const AppNavigator = TabNavigator({
-  Home: { screen: HomePageContainer }
+    Home: { screen: HomePageContainer }
 });
 
-const Navigator = ({ dispatch, nav }) => {
-      console.log('Dispatch: ' + JSON.stringify(dispatch));
-      console.log('nav: ' + JSON.stringify(nav));
-      return (
-      <AppNavigator
-          navigation={addNavigationHelpers({ dispatch, state: nav })}
-      />)};
+const Navigator = ({ dispatch, nav }) =>
+  <AppNavigator
+      navigation={addNavigationHelpers({ dispatch, state: nav })}
+  />;
 
 export  { AppNavigator, Navigator };

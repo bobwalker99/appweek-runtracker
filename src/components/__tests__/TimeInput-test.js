@@ -1,18 +1,18 @@
 /**
  */
- 'use strict';
+ "use strict";
 
-const React = require('React');
-const ReactTestRenderer = require('react-test-renderer');
-const Text = require('Text');
+ const React = require("React");
+ const ReactTestRenderer = require("react-test-renderer");
+ const Text = require("Text");
 
-import TimeInput from '../TimeInput.react';
+ import TimeInput from "../TimeInput.react";
 
-describe('TimeInput', () => {
-  it('renders correctly', () => {
-    const instance = ReactTestRenderer.create(
+ describe("TimeInput", () => {
+     it("renders correctly", () => {
+         const instance = ReactTestRenderer.create(
       <TimeInput style={{}} />
     );
-    expect(instance.toJSON()).toMatchSnapshot();
-  });
-});
+         expect(instance.toJSON()).toMatchSnapshot();
+     });
+ });

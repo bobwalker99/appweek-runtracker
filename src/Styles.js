@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 
 /**
@@ -46,39 +46,36 @@ NHS Warm Yellow #FFB81C
 NHS Yellow #FAE100
 */
 const styles = StyleSheet.create({
-  homeScreen: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'white',
-  },
-  header: {
-    height: 65,
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    paddingTop: 20,
-    paddingRight:5,
-    backgroundColor: '#0072CE',
-    zIndex: 100,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  titleText: {
-    fontSize: 18,
-    color: 'white',
-    paddingTop: 14,
-    paddingLeft: 14
-  },
-  timeInput: {
-    flex:1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent:'space-between',
-    backgroundColor: '#ff0000',
-  },
+    homeScreen: {
+        flex: 1,
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "white"
+    },
+    header: {
+        height: 65,
+        position: "absolute",
+        left: 0,
+        right: 0,
+        top: 0,
+        paddingTop: 20,
+        paddingRight:5,
+        backgroundColor: "#0072CE",
+        zIndex: 100,
+        flexDirection: "row",
+        justifyContent: "space-between"
+    },
+    titleText: {
+        fontSize: 18,
+        color: "white",
+        paddingTop: 14,
+        paddingLeft: 14
+    },
+    timeInput: {
+        width:150,
+        backgroundColor: "#ff0000"
+    }
 });
 
 export default styles;
