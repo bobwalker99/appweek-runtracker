@@ -16,17 +16,20 @@ const TimeInput = props =>
   <View style={styles.timeInput}>
       <Text>Hours</Text>
       <Picker
-        onValueChange={(val, pos) => props.onHoursChanged(val, pos)}>
+        selectedValue={props.hours}
+        onValueChange={(val) => props.onHoursChanged(val)}>
         {pickerItemGenerator(12)}
       </Picker>
       <Text>Minutes</Text>
       <Picker
-        onValueChange={(val, pos) => props.onMinutesChanged(val, pos)}>
+        selectedValue={props.minutes}
+        onValueChange={(val) => props.onMinutesChanged(val)}>
         {pickerItemGenerator(60)}
       </Picker>
       <Text>Seconds</Text>
       <Picker
-        onValueChange={(val, pos) => props.onSecondsChanged(val, pos)}>
+        selectedValue={props.seconds}
+        onValueChange={(val) => props.onSecondsChanged(val)}>
         {pickerItemGenerator(60)}
       </Picker>
   </View>;

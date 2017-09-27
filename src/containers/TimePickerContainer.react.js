@@ -12,7 +12,12 @@ import * as TimeChangeActionCreators from "../actions/TimeChangeActionCreators.j
  *	this maps the global state to the props that this component needs
  */
 const mapStateToProps = state => {
-    return {  };
+  console.log('TIME STATE: MF ' + JSON.stringify(state));
+    return {
+        hours: state.displayReducer.time.hours,
+        minutes: state.displayReducer.time.minutes,
+        seconds: state.displayReducer.time.seconds,
+     };
 };
 
 /**
@@ -21,8 +26,8 @@ const mapStateToProps = state => {
  */
 const mapDispatchToProps = dispatch => ({
     onHoursChanged: (hours) => {dispatch(TimeChangeActionCreators.hoursChanged(hours))},
-    onMinutesChanged: TimeChangeActionCreators.minutesChanged,
-    onSecondsChanged: TimeChangeActionCreators.secondsChanged
+    onMinutesChanged: (minutes) => {dispatch(TimeChangeActionCreators.minutesChanged(minutes))},
+    onSecondsChanged: (seconds) => {dispatch(TimeChangeActionCreators.secondsChanged(seconds))},
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TimePicker);
