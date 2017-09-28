@@ -8,7 +8,6 @@ import DistanceSelector from "../components/DistanceSelector.react";
 import * as InputChangeActionCreators from "../actions/InputChangeActionCreators.js";
 
 const mapStateToProps = state => {
-  console.log("Distance state: " + JSON.stringify(state));
   return {
       distance: state.inputReducer.recordedDistance.distance,
       miles: state.inputReducer.recordedDistance.miles,

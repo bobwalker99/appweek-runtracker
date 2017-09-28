@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
       flexDirection:"row"
     },
     labelledContainer: {
-      flexDirection: "column",
+      flexDirection: "column"
     },
     label: {
       paddingTop:10,

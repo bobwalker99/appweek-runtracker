@@ -75,7 +75,9 @@ const styles = StyleSheet.create({
     mainPanel: {
       top: 67,
       flex:1,
-      backgroundColor:"#E8EDEE",
+      flexDirection:"column",
+      justifyContent: "space-between",
+      backgroundColor:"#E8EDEE"
     }
 });
 

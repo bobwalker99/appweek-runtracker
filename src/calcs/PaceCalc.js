@@ -1,18 +1,15 @@
 //@flow
 'use strict';
 
-export const predictedTime=(previousRaceTime:number, previousRaceDistance:number, distance:number) =>{
+export const predictGoal=(previousRaceTime:number, previousRaceDistance:number, goalDistance:number) =>{
   /*
-  All times to be in seconds
+  All times to be in seconds, distances in km
+  Based on Peter Reigel's:
+    T2=T1×(D2÷D1)^1.06
   */
-  const distanceModifier = Math.pow((distance/previousRaceDistance), 1.06);
-  return Math.round(previousRaceTime * distanceModifier);
-};
-
-export const predictedPace=(previousRaceTime:number, previousRaceDistance:number, distance:number) => {
-  /*
-  All times to be in seconds
-  */
-  const predictedRaceTime = predictedTime(previousRaceTime, previousRaceDistance, distance)
-  return Math.round(predictedRaceTime/distance);
+  const distanceModifier = Math.pow((goalDistance/previousRaceDistance), 1.06);
+  const predictedTime = Math.round(previousRaceTime * distanceModifier);
+  const predictedPace = Math.round(predictedTime/goalDistance);
+  return { time: isNaN(predictedTime) ? 0 : predictedTime,
+           pace: isNaN(predictedPace) ? 0 : predictedPace };
 };

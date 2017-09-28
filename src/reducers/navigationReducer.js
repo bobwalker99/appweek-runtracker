@@ -15,8 +15,6 @@ const tempNavState = AppNavigator.router.getStateForAction(firstAction);
 const initialNavState = AppNavigator.router.getStateForAction(tempNavState);
 
 const nav = (state = { ...initialNavState }, action) => {
-    //console.log("state in nav reducer: " + JSON.stringify(state));
-    //console.log("action in nav reducer: " + JSON.stringify(action));
     let nextState;
     switch (action.type) {
     case types.NAVIGATION_HOME:
@@ -30,9 +28,8 @@ const nav = (state = { ...initialNavState }, action) => {
         break;
     }
 
-  // Simply return the original `state` if `nextState` is null or undefined.
+    // Simply return the original `state` if `nextState` is null or undefined.
     const retVal = nextState || state;
-    console.log("retVal: " + JSON.stringify(retVal));
     return retVal;
 };
 

@@ -6,6 +6,7 @@ import {
     Slider,
     Switch
 } from 'react-native';
+import * as Calcs from '../calcs/DisplayCalc';
 
 const DistanceSelector = props =>
       <View style={styles.distance_container}>
@@ -16,7 +17,6 @@ const DistanceSelector = props =>
               minimumValue={0}
               maximumValue={100}
               onValueChange={ (distance) => {
-                console.log('PROPS: ' + JSON.stringify(props));
                 props.onDistanceChanged(distance, props.miles )
                 }
               }
@@ -26,18 +26,9 @@ const DistanceSelector = props =>
           <View style={styles.distance_switch}>
             <Switch
               onValueChange={ (miles) => {
-                  var distance = props.distance;
-                  console.log('pre-distance: ' + distance + " miles:" + miles + ", props: " + JSON.stringify(props));
-                  if (props.miles && !miles) {
-                    //was miles, convert to km
-                    distance = distance * 1.609344;
-                  }
-                  else if (!props.miles && miles) {
-                    //was km convert to miles
-                    distance = distance / 1.609344;
-                  }
-                  distance = Math.round(distance * 100) / 100;
-                  console.log('post-distance: ' + distance);
+                  const distance = Calcs.calculateDisplayDistanceOnUnitChange(props.distance,
+                                                                              props.miles,
+                                                                              miles);
                   props.onDistanceChanged(distance, miles);
                 }
               }
