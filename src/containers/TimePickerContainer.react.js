@@ -11,10 +11,10 @@ import * as InputChangeActionCreators from "../actions/InputChangeActionCreators
 /** Called by redux when the state changes -
  *	this maps the global state to the props that this component needs
  */
-const mapStateToProps = state => ({  
-        hours: state.displayReducer.time.hours,
-        minutes: state.displayReducer.time.minutes,
-        seconds: state.displayReducer.time.seconds,
+const mapStateToProps = state => ({
+        hours: state.inputReducer.recordedTime.hours,
+        minutes: state.inputReducer.recordedTime.minutes,
+        seconds: state.inputReducer.recordedTime.seconds,
 });
 
 /**

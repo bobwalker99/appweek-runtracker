@@ -10,14 +10,14 @@ import * as InputChangeActionCreators from "../actions/InputChangeActionCreators
 const mapStateToProps = state => {
   console.log("Distance state: " + JSON.stringify(state));
   return {
-      distance: state.displayReducer.distance.distance,
-      miles: state.displayReducer.distance.miles,
+      distance: state.inputReducer.recordedDistance.distance,
+      miles: state.inputReducer.recordedDistance.miles,
    };
 };
 
 const mapDispatchToProps = dispatch => ({
   onDistanceChanged: (distance, miles) => {
-    dispatch(InputChangeActionCreators.distanceChanged(distance, miles))
+    dispatch(InputChangeActionCreators.recordedDistanceChanged(distance, miles))
   },
 });
 

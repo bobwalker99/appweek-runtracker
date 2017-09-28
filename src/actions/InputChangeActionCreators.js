@@ -28,15 +28,15 @@ export const secondsChanged = (seconds: number) =>  {
     };
 };
 
-export const timeChanged = (time: number) =>  {
+export const recordedTimeChanged = (time: number) =>  {
     console.log("Time changed to: " + time);
     return {
-        type: types.TIME_CHANGED,
+        type: types.RECORDED_TIME_CHANGED,
         time
     };
 };
 
-export const distanceChanged = (distance: number, miles: boolean) =>  {
+export const recordedDistanceChanged = (distance: number, miles: boolean) =>  {
     console.log("Distance changed to: " + distance + (miles ? "miles" : "km"));
     return {
         type: types.RECORDED_DISTANCE_CHANGED,

@@ -8,7 +8,7 @@ import { Picker, StyleSheet, Text, View } from 'react-native';
 const pickerItemGenerator = (arraySize) => {
   const timeArray = [...Array(arraySize).keys()];
   return timeArray.map((item, index) => {
-    return <Picker.Item style={styles.pickerItem} key={index} label={item.toString()} value={index} />
+    return <Picker.Item key={index} label={item.toString()} value={index} />
   });
 }
 

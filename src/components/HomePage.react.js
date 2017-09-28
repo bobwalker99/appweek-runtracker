@@ -7,6 +7,7 @@ import { Image, View, Text } from "react-native";
 import { TabNavigator } from "react-navigation";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
+import GoalsContainer from "../containers/GoalsContainer.react"
 import DistanceSliderContainer from "../containers/DistanceSliderContainer.react"
 import TimePickerContainer from "../containers/TimePickerContainer.react";
 import styles from "../Styles";
@@ -34,6 +35,7 @@ const HomePage = props =>
         <View style={styles.mainPanel}>
             <DistanceSliderContainer />
             <TimePickerContainer />
+            <GoalsContainer />
         </View>
     </View>;
 
