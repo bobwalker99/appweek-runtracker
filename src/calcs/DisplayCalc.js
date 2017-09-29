@@ -67,7 +67,10 @@ const distancesInKm = [ { label: '5k',
                         { label: 'Half-Marathon',
                           distance: 21.0975 },
                         { label: 'Marathon',
-                          distance: 42.195 } ];
+                          distance: 42.195 },
+                        { label: 'Home to pub',
+                            distance: 4.3 },
+                          ];
 
 export const recalculateGoals = (recordedSeconds:number, recordedDistance:number) => {
     return distancesInKm.map((item, index) => {

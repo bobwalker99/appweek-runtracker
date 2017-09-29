@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
     timeInputContainer: {
       height: 100,
       flexDirection:"row",
-      borderWidth:0.5,
     },
     labelledContainer: {
       flexDirection: "column"
