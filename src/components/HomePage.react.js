@@ -39,6 +39,4 @@ const HomePage = props =>
         </View>
     </View>;
 
-HomePage.navigationOptions = navigationOptions;
-
 export default HomePage;

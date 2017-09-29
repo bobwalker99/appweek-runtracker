@@ -3,8 +3,8 @@
 
 import React from "react";
 
-import NavigationContainer from "../containers/NavigationContainer.react";
+import HomePageContainer from "../containers/HomePageContainer.react";
 
-const App = props => <NavigationContainer />;
+const App = props => <HomePageContainer />;
 
 export default App;
