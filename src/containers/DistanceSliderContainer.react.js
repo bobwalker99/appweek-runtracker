@@ -11,6 +11,7 @@ const mapStateToProps = state => {
   return {
       distance: state.inputReducer.recordedDistance.distance,
       miles: state.inputReducer.recordedDistance.miles,
+      max: state.inputReducer.max,
    };
 };
 

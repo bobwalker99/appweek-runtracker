@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
       width: 45
     },
     pickerItem: {
-      height:130
+      height:110
     }
 });
 

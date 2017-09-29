@@ -9,6 +9,10 @@ import * as DisplayCalcs from '../calcs/DisplayCalc';
 
 //We're treating this as a component, so style it locally
 const styles = StyleSheet.create({
+    labelledContainer: {
+      borderWidth: StyleSheet.hairlineWidth,
+      height:250
+    },
     listRow: {
       flexDirection:"row",
       justifyContent: 'space-between',

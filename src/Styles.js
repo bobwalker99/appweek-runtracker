@@ -76,8 +76,7 @@ const styles = StyleSheet.create({
       top: 67,
       flex:1,
       flexDirection:"column",
-      justifyContent: "space-between",
-      backgroundColor:"#E8EDEE"
+      justifyContent: "flex-start",
     }
 });
 

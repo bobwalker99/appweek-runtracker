@@ -10,7 +10,8 @@ import * as types from "../constants/ActionTypes";
 const initialState = {
     recordedTime: { hours: 0, minutes:30, seconds: 0 },
     recordedDistance: { distance: 5, miles: false },
-    pace: { unitTime: 300, units: "km" }
+    pace: { unitTime: 300, units: "km" },
+    max: 50
 };
 
 initialState.goals = DisplayCalc.recalculateGoals(DisplayCalc.hmsToS(initialState.recordedTime),
@@ -46,6 +47,7 @@ const inputReducer = (state = initialState, action) => {
             case types.RECORDED_DISTANCE_CHANGED:
                 newState.recordedDistance = { distance: action.distance,
                                              miles: action.miles };
+                newState.max = action.miles ? 50 : 80;
                 break;
             case types.PACE_CHANGED:
                 newState.pace = action.pace;
