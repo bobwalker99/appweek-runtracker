@@ -29,6 +29,7 @@ const DistanceSelector = props =>
           <View style={styles.distanceSwitchContainer}>
           <Text style={styles.distanceValue}>{ props.distance }</Text>
           <View style={styles.distance_switch}>
+              <Text style={styles.switchLabel}>{ props.miles ? "Miles" : "Kilometers" }</Text>
               <Switch
                 onValueChange={ (miles) => {
                     const distance = Calcs.calculateDisplayDistanceOnUnitChange(props.distance,
@@ -39,7 +40,6 @@ const DistanceSelector = props =>
                 }
                 value={ props.miles }
                 />
-                <Text>{ props.miles ? "Miles" : "Kilometers" }</Text>
             </View>
           </View>
       </View>;
@@ -63,21 +63,26 @@ const styles = StyleSheet.create({
   distanceSwitchContainer: {
     flex:1,
     flexDirection: "row",
-    justifyContent: "flex-start",
-    paddingBottom: 0,
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: 0,
     height:35,
   },
   distanceValue: {
-    fontSize: 15,
+    fontSize: 25,
     fontWeight: 'bold',
-    width: 35
+    width: 100,
+    paddingLeft: 5,
   },
   distance_switch: {
     width:100,
     height: 35,
     flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "flex-start",
+    justifyContent: "flex-end",
+    alignItems: "center",
+  },
+  switchLabel: {
+    paddingRight:10
   }
 });
 
